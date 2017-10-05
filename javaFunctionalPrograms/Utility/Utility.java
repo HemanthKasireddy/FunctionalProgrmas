@@ -10,6 +10,11 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Utility {
 	
+	/**
+	 * @param flipcount
+	 * @author Hemanth
+	 * <p> This method for start the coin game
+	 */
 	public static void coinGameStart(int flipcount) {
 		int heads=0;
 	    int tails=0;
@@ -41,6 +46,13 @@ public class Utility {
 	    } 
 	}
 	
+	/**
+	 * @param minimum
+	 * @param maximum
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for get the random number
+	 */
 	public static int getRandom( int minimum , int maximum ) {
 	     int trial = 0;
 	     try {
@@ -55,6 +67,11 @@ public class Utility {
 	     return trial;
 	   }//getRandom
 
+	/**
+	 * @param input
+	 * @author Hemanth
+	 * <p> This method for combinations of string by using iteration method
+	 */
 	public static void iteration(String input){
 		//int count=2;
 		System.out.println("possible string by iteration: ");
@@ -78,11 +95,24 @@ public class Utility {
 			}
 		}
 	}
+	/**
+	 * @param charArray1
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for combine string
+	 */
 	private static String join(char[] charArray1) {
 	    StringBuilder builder = new StringBuilder();
 	    builder.append(charArray1);
 	    return builder.toString();
 	}
+	/**
+	 * @param string
+	 * @param low
+	 * @param high
+	 * @author Hemanth
+	 * <p> This method for combinations of string by using recursion method
+	 */
 	public static void recursion(String string,int low,int high){
 		//int count=1;
 
@@ -97,6 +127,14 @@ public class Utility {
 				}
 		}
 	}
+	/**
+	 * @param string
+	 * @param low
+	 * @param index
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for swapping string characters 
+	 */
 	public static String swap(String string,int low,int index){
 		
 		char[] charArray= string.toCharArray();
@@ -106,11 +144,28 @@ public class Utility {
 		return String.valueOf(charArray);
 	}
 	
+	/**
+	 * @param charArray2
+	 * @param i
+	 * @param j
+	 * @author Hemanth
+	 * <p> This method for swapping string characters 
+	 */
 	private static void swap(char[] charArray2, int i, int j) {
 	    char temp = charArray2[i];
 	    charArray2[i] = charArray2[j];
 	    charArray2[j] = temp;
 	}
+	
+	/**
+	 * @param array
+	 * @param minimum
+	 * @param maximum
+	 * @param number
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for get distinct cupone number
+	 */
 	public static int getDistinctCuponNumber(int array[],int minimum,int maximum,int number) {
 	   int count=0;
 	   try {
@@ -139,6 +194,13 @@ public class Utility {
 	    
 	 }//getDistinctCuponNumber
 
+	/**
+	 * @param stackAmount
+	 * @param goalAmount
+	 * @param number
+	 * @author Hemanth
+	 * <p> This method for start game
+	 */
 	public static void gameStart( int stackAmount , int goalAmount , int number ) {
 	
 	  int bets = 0;
@@ -168,6 +230,12 @@ public class Utility {
 	  System.out.print( "Wins percentage is  : "+ winPercentage );
 	 
 	}
+	/**
+	 * @param number
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for find Harmonic value
+	 */
 	public static double harmonicValue(int number) {
 		  double sum=0;
 		  //double result;
@@ -179,6 +247,11 @@ public class Utility {
 		     return sum;
 		}
 
+	/**
+	 * @param tripletsArray 
+	 * @author Hemanth
+	 * <p> This method for find triplets elements in array 
+	 */
 	public static void getTriplets(int[] tripletsArray) {
 		
 		// taking hash set to eliminate duplicate triplets in the triplets array
@@ -218,6 +291,12 @@ public class Utility {
 			    System.out.println("Total Triplets Count is : "+tripletsCount);
 			}
 
+	/**
+	 * @param year
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for find given year is leap year or not
+	 */
 	public static boolean isLeapYear(String year) {
 	       if ((Integer.parseInt(year) % 400 == 0) || ((Integer.parseInt(year) % 4 == 0) && (Integer.parseInt(year) % 100 != 0))) {
 	    	 
@@ -228,6 +307,11 @@ public class Utility {
 	       }
 	}
 
+	/**
+	 * @param number
+	 * @author Hemanth
+	 * <p> This method for find given number is power of two or not
+	 */
 	public static void findPowerOfTwo(int number) {
 
 		  if (number >=0 && number <31)
@@ -242,6 +326,11 @@ public class Utility {
 		     }
 	}
 
+	/**
+	 * @param number
+	 * @author Hemanth
+	 * <p> This method for find prime factors of given number
+	 */
 	public static void primeFactors(int number) {
 		
 		   int n=number;
@@ -262,6 +351,12 @@ public class Utility {
 		 
 	}
 
+	/**
+	 * @param arryOfElements
+	 * @param columns
+	 * @author Hemanth
+	 * <p>print 2d Array
+	 */
 	public static<E> void print2DArray(E[]arryOfElements, int columns) {
 	   PrintWriter writer = new PrintWriter(System.out);
 		   int columnCount=0;
@@ -276,15 +371,26 @@ public class Utility {
 
 		   } 
 	}
+	/**
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for find current time in mill seconds
+	 */
 	public static long curretnTime()
 	{
 		long startTime=System.currentTimeMillis();
 		return startTime;
 	}
+	/**
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for start the stop watch
+	 */
 	public static long startStopWatch() {
 		long startTime=0;
 		boolean isStart=true;
 		Scanner scanner=new Scanner(System.in);
+		try {
 			do {
 				System.out.print("to Start the watch press \"S\" button : ");
 				String start=scanner.nextLine().toLowerCase();
@@ -298,32 +404,53 @@ public class Utility {
 				}
 		    
 			} while(isStart==true);
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			scanner.close();
+		}
 		
 		return startTime;
 	}
 
+	/**
+	 * @param startTime
+	 * @return
+	 * @author Hemanth
+	 * <p> This method for start the stop watch 
+	 */
 	public static long stopStopWatch(long startTime) {
 		Scanner scanner=new Scanner(System.in);
-
         long endTime=0;
 		boolean isEnd=true;
-
-		do {
-			System.out.print("to Stop the watch press \"E\"enter button : ");
-			String end=scanner.next().toLowerCase();
-			
-			if(end.equals("e")) {   
-				 endTime=curretnTime();
-				isEnd=false;
-			} else {
-				System.out.println("You are entered \"WRONG CHOICE \"");
-				isEnd=true;
-			}
-	     
-		}while(isEnd==true);
+        try {
+			 do {
+					System.out.print("to Stop the watch press \"E\"enter button : ");
+					String end=scanner.next().toLowerCase();
+					
+					if(end.equals("e")) {   
+						 endTime=curretnTime();
+						isEnd=false;
+					} else {
+						System.out.println("You are entered \"WRONG CHOICE \"");
+						isEnd=true;
+					}
+		     
+			 }while(isEnd==true);
+        } catch (Exception ex) {
+			ex.printStackTrace();
+		} finally {
+			scanner.close();
+		}
 		return endTime;
 	}
 	
+	/**
+	 * @param gameTableArray
+	 * @return
+	* @author Hemanth
+	 * <p> This method for start the tic-tac-toe game
+	 */
 	public static char[][] launchGame(char [][]gameTableArray) {
 		char userChoice='X';
 		char computerChoice='O';
@@ -396,7 +523,12 @@ public class Utility {
 		}
 		 return   gameTableArray;
 }
-    //for displaying board
+    
+	/**
+	 * @param table
+	 * @author Hemanth
+	 * <p> This method for displaying board
+	 */
 	public static void displayBoard(char [][]table) 
 	{
 
@@ -410,8 +542,14 @@ public class Utility {
 	    
 	  
 	}
-    //checking for user is winning or not
-   public static boolean isUserWinner(char [][]table) {
+    
+   /**
+    * @param table
+    * @return
+    * @author Hemanth
+	* <p> This method checking for user is winning or not
+	*/
+	public static boolean isUserWinner(char [][]table) {
         if(   ( table [0][0]==table[1][0] && table[1][0] == table[2][0])&&table [0][0]=='X'||
         	  ( table [0][1]==table[1][1] && table[1][1] == table[2][1])&&table [0][1]=='X'||
         	  ( table [0][2]==table[1][2] && table[1][2] == table[2][2])&&table [0][2]=='X'||
@@ -427,8 +565,14 @@ public class Utility {
            return false;
 
    }
-   //checking for Computer is winning or not
-   public static boolean isComputerWinner(char [][]table) {
+   
+	  /**
+	    * @param table
+	    * @return
+	    * @author Hemanth
+		* <p> This method checking for Computer is winner or not
+		*/
+    public static boolean isComputerWinner(char [][]table) {
 	  if(     ( table [0][0]==table[1][0] && table[1][0] == table[2][0])&&table [0][0]=='O'||
         	  ( table [0][1]==table[1][1] && table[1][1] == table[2][1])&&table [0][1]=='O'||
         	  ( table [0][2]==table[1][2] && table[1][2] == table[2][2])&&table [0][2]=='O'||
@@ -444,21 +588,27 @@ public class Utility {
            return false;
     }
 
-   public static void findChill(double temperature, double velocity) {
+   /**
+    * @param temperature
+    * @param velocity
+    * @author Hemanth
+	* <p> This method checking wind chill
+	*/
+
+    public static void findChill(double temperature, double velocity) {
 	
-	/*checking the  temperature is less than 50 in absolute value and 
-	 velocity is less than 120 and less than 3 */
+    	/* checking the  temperature is less than 50 in absolute value and 
+	 	   velocity is less than 120 and less than 3 */
 	
-	if (temperature<=50.0 && (velocity>=3&&velocity<=120) ) {
+    	if (temperature<=50.0 && (velocity>=3&&velocity<=120) ) {
 		
 		// Finding Wind Chill by using formula and taking into the weather variable 
-		double weather=35.74+0.6215*temperature+((0.4275*temperature-35.75)*Math.pow(velocity, 0.16));
-		System.out.println("Wind Chill is : "+weather);
-	} else {
+    		double weather=35.74+0.6215*temperature+((0.4275*temperature-35.75)*Math.pow(velocity, 0.16));
+    		System.out.println("Wind Chill is : "+weather);
+    	} else {
 		
-		System.out.println("Please enter the values in valid range:");
-	  }
-}
-	
+    		System.out.println("Please enter the values in valid range:");
+    	}
+    }
 	
 }
